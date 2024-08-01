@@ -11,7 +11,7 @@ body {
   background-color: var(--cor-de-fundo);
   color: var(--branco-principal);
   font-family: var(--fonte-principal);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 400;
 }
 
@@ -23,7 +23,7 @@ body {
 .principal {
   background-image: url('img/Background.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   align-items: center;
   text-align: center;
 }
@@ -46,13 +46,13 @@ body {
 }
 
 .container__aviso {
-  font-size: 18px;
+  font-size: 1.1em;
   color: var(--preto-secundario);
   margin: 1em 0 2em 0;
 }
 
 .container__titulo {
-  font-size: 36px;
+  font-size: 2.3em;
   font-weight: 700;
   margin: 1em 0 1em 0;
 }
@@ -72,7 +72,7 @@ body {
 
 .descricao__titulo {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 3em;
   color: var(--branco-principal);
   margin-bottom: 0.5em;
 }
@@ -90,30 +90,40 @@ body {
   padding: 2em;
 }
 
-.dispositivos__lista {
+.questoes__lista {
   display: flex;
   justify-content: center;
   list-style-type: none;
-  margin: 5em 0;
+  margin: 5em 2em;
 }
 
-.dispositivos {
+.questoes__lista li {
+  margin: 1em 3em;
+}
+
+.questoes {
+  margin-top: 2em;
   text-align: center;
 }
 
-.dispositivos__titulo {
-  font-size: 48px;
+.questoes__titulo {
+  font-size: 3em;
   color: var(--branco-principal);
 }
 
-.lista__item {
-  font-size: 32px;
-  color: var(--branco-principal);
+.lista__titulo {
+  font-size: 1.8em;
+  color: var(--preto-secundario);
+}
+
+.lista__paragrafo {
+  font-size: 1em;
+  margin: 1.5em 0;
 }
 
 .rodape {
   text-align: center;
-  margin: 5em 3em;
+  margin: 1em 3em;
 }
 
 .rodape__lista {
@@ -132,7 +142,7 @@ body {
 .rodape__texto {
   margin: 1em 0;
   color: var(--preto-secundario);
-  font-size: 14px;
+  font-size: 0.8em;
 }
 
 .lista__link a:hover {
@@ -146,4 +156,32 @@ body {
 .container__botao:hover {
   background-color: var(--botao-verde-efeito);
   color: var(--preto-secundario);
+}
+
+@media screen and (max-width: 768px) {
+  .principal {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 5em;
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 10em;
+  }
+
+  .secundario {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 10em;
+  }
+
+  .questoes {
+    width: 100%;
+    margin-bottom: 5em;
+  }
 }
